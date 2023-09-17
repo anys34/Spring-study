@@ -1,13 +1,12 @@
 package yeseongspring.helloboot;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
 
-@RequestMapping("hello")
+@RestController
 public class HelloController {
     private final HelloService helloService;
 
@@ -15,8 +14,7 @@ public class HelloController {
         this.helloService = helloService;
     }
 
-    @GetMapping
-    @ResponseBody
+    @GetMapping("/hello")
     // @RequestMapping(value = "/hello", method = RequestMethod.GET);
     public String hello(String name) {
         return helloService.sayHello(Objects.requireNonNull(name));

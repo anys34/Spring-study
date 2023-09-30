@@ -1,4 +1,4 @@
-package com.jojoldu.boot.springboot2webservice.service.posts;
+package com.jojoldu.boot.springboot2webservice.service;
 
 import com.jojoldu.boot.springboot2webservice.domain.posts.Posts;
 import com.jojoldu.boot.springboot2webservice.domain.posts.PostsRepository;

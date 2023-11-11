@@ -58,5 +58,4 @@ public class IndexController {
         userRepository.save(user);
         return "redirect:/loginForm";
     }
-
 }
